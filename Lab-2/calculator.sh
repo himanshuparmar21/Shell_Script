@@ -11,3 +11,5 @@ echo "Sum:$sum"
 echo "Sub:$sub"
 echo "Mul:$mul"
 echo "Div:$div"
+
+div=$(echo "scale=2; $a / $b" | bc)
