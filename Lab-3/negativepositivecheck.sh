@@ -7,5 +7,5 @@ echo "$num is Positive"
 fi
 if [ $num -lt 0 ]
 then
-echo "$num is Positive"
+echo "$num is Negative"
 fi
