@@ -1,27 +1,26 @@
 echo "Enter Number"
 read n
-i=2
-temp=-1
+
 num=$n
 count=0
 while [ $num -gt 0 ]
 do
-    count=`expr $count + 1`
+    num=$(( $num / 10 ))
+    count=$(( $count + 1 ))
 done
 
-while [ $i -lt $n ]
+sum=0
+num=$n
+while [ $num -gt 0 ]
 do
-    ans=`expr $n % $i`
-    if [ $ans -eq 0 ]
-    then 
-    temp=1
-    fi
-    i=`expr $i + 1`
+    digit=$(( $num % 10 ))
+    sum=$(( $sum + $digit ** $count ))
+    num=$(( $num / 10 ))
 done
 
-if [ $temp -eq -1 ]
-    then 
-    echo "$n is Prime"
+if [ $sum -eq $n ]
+then
+    echo "$n is an Armstrong Number"
 else
-    echo "$n is Not Prine"
+    echo "$n is not an Armstrong Number"
 fi

@@ -21,3 +21,14 @@ else
     echo "$num3 is maximum"
     fi
 fi
+
+
+if [ $num1 -gt $num2 -a $num1 -gt $num3 ]
+then
+    echo "$num1 is maximum"
+elif [ $num2 -gt $num3 ]
+then
+    echo "$num2 is maximum"
+else
+    echo "$num3 is maximum"
+fi

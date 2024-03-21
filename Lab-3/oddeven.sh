@@ -1,7 +1,7 @@
 echo "Enter Number"
 read num
 
-ans=`expr $num \% 2`
+ans=`expr $num % 2`
 # $(num % 2)
 if [ $ans -eq 0 ]
 then 

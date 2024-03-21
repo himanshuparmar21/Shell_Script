@@ -1,24 +1,12 @@
 echo "Enter Electric Bill Unit:"
-read unit
+read units
 
-if [ $result -ge 90 ]
-    then 
-    echo "A"
-elif [ $result -ge 80 -a $result -lt 90 ]
-    then 
-    echo "B+"
-elif [ $result -ge 70 -a $result -lt 80 ]
-    then 
-    echo "B"
-elif [ $result -ge 60 -a $result -lt 70 ]
-    then 
-    echo "C+"
-elif [ $result -ge 50 -a $result -lt 60 ]
-    then 
-    echo "C"
-elif [ $result -ge 40 -a $result -lt 50 ]
-    then 
-    echo "D+"
-else
-    echo "Fail"
-fi
+if [ "$units" -le 100 ]; then
+        echo "$units * 10" | bc
+    elif [ "$units" -le 200 ]; then
+        echo "100 * 10 + ($units - 100) * 15" | bc
+    elif [ "$units" -le 300 ]; then
+        echo "100 * 10 + 100 * 15 + ($units - 200) * 20" | bc
+    else
+        echo "100 * 10 + 100 * 15 + 100 * 20 + ($units - 300) * 25" | bc
+    fi
