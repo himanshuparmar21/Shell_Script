@@ -1,4 +1,4 @@
-echo "Enter Number"
+echo "Enter Age"
 read num
 echo "Enter Name"
 read name
